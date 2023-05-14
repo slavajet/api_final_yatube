@@ -22,13 +22,14 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-## Примеры
-### Пример запросов к API:
+## Документация к API
+http://127.0.0.1:8000/redoc/
 
-1. Создание нового поста:
-POST /api/v1/posts/
-Content-Type: application/json
-Authorization: Token your_token
+
+## Примеры запросов к API:
+
+1. Создание нового поста: `POST /api/v1/posts/`
+
 ```
 {
   "text": "string",
@@ -36,8 +37,7 @@ Authorization: Token your_token
   "group": 0
 }
 ```
-2. Получение списка постов:
-GET /api/v1/posts/
+2. Получение списка постов: `GET /api/v1/posts/`
 ```
 {
   "count": 123,
@@ -56,12 +56,7 @@ GET /api/v1/posts/
 }
 ```
 
-3. Обновление поста:
-PUT /api/v1/posts/{post_id}/
-Content-Type: application/json
-Authorization: Token your_token
-
-payload
+3. Обновление поста: `PUT /api/v1/posts/{post_id}/`
 ```
 {
   "text": "string",
@@ -79,16 +74,11 @@ payload
   "group": 0
 }
 ```
-4. Удаление поста:
-DELETE /api/v1/posts/{post_id}/
-Authorization: Token your_token
+4. Удаление поста: `DELETE /api/v1/posts/{post_id}/`
 
 5. Создание нового комментария к посту:
-POST /api/v1/posts/{post_id}/comments/
-Content-Type: application/json
-Authorization: Token your_token
+`POST /api/v1/posts/{post_id}/comments/`
 
-payload
 ```
 {
   "text": "string"
@@ -103,8 +93,7 @@ payload
   "post": 0
 }
 ```
-6. Получение комментария к посту:
-GET /api/v1/posts/{post_id}/comments/{id}/
+6. Получение комментария к посту: `GET /api/v1/posts/{post_id}/comments/{id}/`
 ```
 {
   "id": 0,
@@ -114,15 +103,6 @@ GET /api/v1/posts/{post_id}/comments/{id}/
   "post": 0
 }
 ```
-7. Подписка на пользователя:
-POST /api/v1/follow/
-Authorization: Token your_token
+7. Подписка на пользователя: `POST /api/v1/follow/`
 
-
-8. Получение списка подписчиков пользователя:
-GET /api/v1/users/{user_id}/followers/
-Authorization: Token your_token
-
-
-**Примечание:** В примерах запросов замените `{post_id}`, `{user_id}` и `your_token` на соответствующие значения.
-
+8. Получение списка подписчиков пользователя: `GET /api/v1/users/{user_id}/followers/`
