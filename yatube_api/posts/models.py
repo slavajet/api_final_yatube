@@ -52,4 +52,4 @@ class Follow(models.Model):
                              related_name='follower')
 
     def __str__(self):
-        return f"{self.user} follows {self.following}"
+        return f'{self.user} follows {self.following}'
